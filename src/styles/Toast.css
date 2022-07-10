@@ -1,0 +1,48 @@
+.toast {
+    background-color: var(--flax);
+    position: fixed;
+    right: 0;
+    top: 0;
+    margin-top: 1.6rem;
+    margin-right: 1.6rem;
+    padding: 1.6rem;
+    z-index: 2;
+    border-radius: .8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    font-family: "Rubik", sans-serif;
+    animation: Up 500ms ease-in-out;
+}
+
+@keyframes Up {
+    from {
+        margin-top: 8rem;
+    }
+    to {
+        margin-top: 1.6rem;
+    }
+}
+
+.icon {
+    height: 4rem;
+    width: 4rem;
+    color: var(--black);
+    border: 1px var(--black) solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    transition: all ease-in-out 300ms;
+    cursor: pointer;
+}
+
+.icon:hover {
+    box-shadow: .4rem .4rem var(--black);
+}
+
+.text {
+    font-size: 1.6rem;
+    color: var(--black);
+}

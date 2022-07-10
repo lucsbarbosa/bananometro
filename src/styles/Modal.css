@@ -1,0 +1,96 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1;
+}
+
+.modal {
+    position: relative;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    background-color: #0e0e0e;
+    border: 1px var(--mustard) solid;
+    padding: 2.4rem;
+    height: 48rem;
+    width: 40rem;
+    border-radius: .8rem;
+}
+
+.input {
+    background: none;
+    font-size: 2.4rem;
+    font-family: "Rubik", sans-serif;
+    color: var(--mustard);
+    border: 0;
+    outline: 0;
+}
+
+.textarea {
+    resize: none;
+    outline: none;
+    border: 0;
+    background: none;
+    height: 32rem;
+    font-size: 1.6rem;
+    font-family: 'Inter', sans-serif;
+    color: white;
+    line-height: 150%;
+}
+
+.form > button {
+    color: var(--black);
+    border-radius: .8rem;
+    padding: 1.6rem 0;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: var(--mustard);
+    font-size: 1.6rem;
+    font-family: 'Rubik', sans-serif;
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+}
+
+form > button:active {
+    transform: scale(0.9);
+}
+
+.textarea::-webkit-input-placeholder {
+    font-size: 1.6rem;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.input::-webkit-input-placeholder {
+    font-size: 2.4rem;
+    color: var(--mustard);
+    font-family: 'Rubik', sans-serif;
+}
+
+.closeModal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 3.2rem;
+    width: 3.2rem;
+    background: #0e0e0e;
+    border: 1px solid var(--mustard);
+    border-radius: 50%;
+    color: var(--mustard);
+    transform: translate(40%, -40%);
+    cursor: pointer;
+    transition: all ease-in-out 300ms;
+}
+
+.closeModal:hover {
+    background-color: var(--mustard);
+    color: var(--black);
+}

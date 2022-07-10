@@ -1,0 +1,29 @@
+body {
+  background-color: var(--black);
+}
+
+main {
+  height: auto;
+  min-height: calc(100vh - 9.6rem);
+  width: 100%;
+  padding: 1.6rem 9.6rem 3.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.line {
+  background-color: #202020;
+  height: 1px;
+  width: 100%;
+}
+
+.noComment {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #202020;
+  font-size: 3.2rem;
+  font-family: "Rubik", sans-serif;
+}

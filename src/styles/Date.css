@@ -1,0 +1,23 @@
+.date {
+  width: 100%;
+}
+
+.date > p {
+  font-size: 3.2rem;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 3.2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.6rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  min-width: 0;
+}
