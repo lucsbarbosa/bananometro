@@ -10,7 +10,7 @@ export default function Modal(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (author !== "" && comment !== "") {
+    if (author.trim() !== "" && comment.trim() !== "") {
       fetch("https://bananometro-api.herokuapp.com/api", {
         method: "POST",
         headers: {
