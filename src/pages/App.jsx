@@ -1,9 +1,9 @@
 import { useEffect, useState, useRef } from "react";
-import Date from "./components/Date";
-import Toast from "./components/Toast";
-import Header from "./components/Header";
+import Date from "../components/Date";
+import Toast from "../components/Toast";
+import Header from "../components/Header";
 
-import "./styles/App.css";
+import "../styles/App.css";
 
 function App() {
   const [render, setRender] = useState(false);
