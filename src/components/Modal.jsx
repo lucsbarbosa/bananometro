@@ -12,9 +12,9 @@ export default function Modal(props) {
     event.preventDefault();
     if (
       author.trim() !== "" &&
-      author.trim() !== "⠀" &&
+      !author.trim().includes("⠀") &&
       comment.trim() !== "" &&
-      comment.trim() !== "⠀"
+      !comment.trim().includes("⠀")
     ) {
       fetch("https://bananometro-api.herokuapp.com/api", {
         method: "POST",
