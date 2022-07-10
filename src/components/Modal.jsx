@@ -10,7 +10,12 @@ export default function Modal(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (author.trim() !== "" && comment.trim() !== "") {
+    if (
+      author.trim() !== "" &&
+      author.trim() !== "⠀" &&
+      comment.trim() !== "" &&
+      comment.trim() !== "⠀"
+    ) {
       fetch("https://bananometro-api.herokuapp.com/api", {
         method: "POST",
         headers: {
@@ -38,7 +43,7 @@ export default function Modal(props) {
           setToast(true);
         });
     } else {
-      setMessage("Preencha os campos corretamente!")
+      setMessage("Preencha os campos corretamente!");
       setToast(true);
     }
   }
@@ -47,7 +52,7 @@ export default function Modal(props) {
 
   return (
     <>
-      {toast && <Toast setToast={setToast} message={message}/>}
+      {toast && <Toast setToast={setToast} message={message} />}
       <div className="overlay">
         <div className="modal">
           <form onSubmit={handleSubmit} className="form">
