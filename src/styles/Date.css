@@ -1,23 +1,26 @@
 .date {
   width: 100%;
+  margin-top: 1.6rem;
 }
 
 .date > p {
   font-size: 3.2rem;
   color: white;
   font-family: "Rubik", sans-serif;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.4rem;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 1.6rem;
-}
-
-.column {
+.my-masonry-grid {
   display: flex;
-  flex-direction: column;
-  gap: 1.6rem;
-  min-width: 0;
+  margin-left: -1.6rem;
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 1.6rem;
+  background-clip: padding-box;
+}
+
+.my-masonry-grid_column > div { 
+  margin-bottom: 1.6rem;
 }

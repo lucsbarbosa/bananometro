@@ -1,0 +1,24 @@
+.loading {
+    position: fixed;
+    inset: 0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #20202066;
+}
+
+.loading > img {
+    height: 8rem;
+    animation: spin 2s infinite ease;
+    user-select: none;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

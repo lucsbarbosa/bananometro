@@ -1,6 +1,10 @@
+import { useState } from "react";
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSquarePlus } from '@fortawesome/free-solid-svg-icons'
+
 import Modal from "./Modal";
 import "../styles/Header.css";
-import { useState } from "react";
 
 export default function Header(props) {
   const [showModal, setShowModal] = useState(false);
@@ -13,19 +17,16 @@ export default function Header(props) {
 
   return (
     <>
-      {showModal && (
-        <Modal
-          setShowModal={setShowModal}
-          setRender={props.setRender}
-          scroll={props.scroll}
-        />
-      )}
+      {showModal && <Modal setShowModal={setShowModal} />}
       <header>
         <div className="brand">
-          <img src="./logo.png" alt="" />
+          <Link to={"/easteregg"}><img src="./logo.png" alt="" /></Link>
           <h1>Bananômetro</h1>
         </div>
-        <button onClick={handleClick}>Novo comentário</button>
+        <button onClick={handleClick}>
+          <FontAwesomeIcon icon={faSquarePlus} className="header-icon"/>
+          <p>Novo comentário</p>
+        </button>
       </header>
     </>
   );

@@ -4,12 +4,11 @@ body {
 
 main {
   height: auto;
-  min-height: calc(100vh - 9.6rem);
   width: 100%;
-  padding: 1.6rem 9.6rem 3.2rem;
+  padding: 0 9.6rem 1.6rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2.4rem;
 }
 
 .line {
@@ -23,7 +22,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   color: #202020;
   font-size: 3.2rem;
   font-family: "Rubik", sans-serif;
+}
+
+@media (max-width: 64em) {
+  main {
+    padding: 0 3.2rem 1.6rem;
+  }
 }

@@ -1,0 +1,22 @@
+.easteregg-overlay {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.6rem;
+    background-image: url('../images/sexyBanana.jpeg');
+    background-size: 40rem;
+    text-align: center;
+}
+
+.easteregg-overlay > h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 3.2rem;
+    color: #0e0e0e;
+    font-weight: normal;
+}
+
+a {
+    cursor: default;
+}

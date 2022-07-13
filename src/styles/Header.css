@@ -1,5 +1,6 @@
 header {
   padding: 1.6rem 9.6rem;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,7 +15,7 @@ header {
   gap: 1.6rem;
 }
 
-.brand > img {
+.brand img {
   height: 6.4rem;
 }
 
@@ -24,10 +25,14 @@ header {
   font-family: "Rubik", sans-serif;
 }
 
+.header-icon {
+  display: none;
+}
+
 header > button {
   color: var(--black);
   border-radius: 0.8rem;
-  padding: 1.6rem 0;
+  height: 5.4rem;
   width: 24rem;
   border: none;
   outline: none;
@@ -35,9 +40,42 @@ header > button {
   font-size: 1.6rem;
   font-family: "Rubik", sans-serif;
   cursor: pointer;
+  position: relative;
   transition: all ease-in-out 300ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header > button:active {
+header > button:hover {
   transform: scale(0.9);
+}
+
+@media (max-width: 64em) {
+  header {
+    padding: 1.6rem 3.2rem;
+  }
+}
+
+@media (max-width: 43.5em) {
+  header > button > p {
+    display: none;
+  }
+  header > button {
+    background: none;
+    padding: 0;
+    justify-content: end;
+    width: fit-content;
+  }
+  .header-icon {
+    display: block;
+    height: 80%;
+    color: var(--mustard);
+  }
+  .brand img {
+    height: 4.8rem;
+  }
+  .brand > h1 {
+    display: none;
+  }
 }
